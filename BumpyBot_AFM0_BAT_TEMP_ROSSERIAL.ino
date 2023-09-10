@@ -8,45 +8,10 @@
  Designed for Adafruit QT Py M0, Reads ADC values at A2 and A3 expecting divided voltage.
  Displays undivided voltage and other derived values on Adafruit 1.12" I2C display.
  Acts as a ROS publisher utilizing rosserial, 
- for msg info, see http://docs.ros.org/en/api/sensor_msgs/html/msg/BatteryState.html
 
- UTILIZES A CUSTOM splash.h in Adafruit_SH110X library for project Logo (not necessary)
+ See README.md for more info.
+*******************************************************************/
 
- UTILIZES A MODIFIED ArduinoHardware.h in ros_lib library for 
- rosserial arduino compatibility with the Adafruit QT Py M0: 
-
- in ros_lib/ArduinoHardware.h, 
- add the following lines between the first "#enddif" and the next "#if defined"
-
-******************************
-#if 1
-class ArduinoHardware {
-  public:
-    ArduinoHardware()
-    {
-      baud_ = 250000;
-    }  
-    void setBaud(long baud){
-      this->baud_= baud;
-    }
-    int getBaud(){return baud_;}
-    void init(){
-      Serial.begin(baud_);
-      while(!Serial.available());
-    }
-    int read(){return Serial.read();};
-    void write(uint8_t* data, int length){
-      for(int i=0; i<length; i++)
-        Serial.write(data[i]);
-    }
-    unsigned long time(){return millis();}
-  protected:
-    long baud_;
-};
-#else
-******************************
-
-*********************************************************************/
 
 //ROSserial
 #include <ros.h>
