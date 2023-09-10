@@ -10,10 +10,10 @@
  Acts as a ROS publisher utilizing rosserial, 
  for msg info, see http://docs.ros.org/en/api/sensor_msgs/html/msg/BatteryState.html
 
- UTILIZES A CUSTOM splash.h in Adafruit_SH110X library for project Logo (not neccesary)
+ UTILIZES A CUSTOM splash.h in Adafruit_SH110X library for project Logo (not necessary)
 
  UTILIZES A MODIFIED ArduinoHardware.h in ros_lib library for 
- rosserial arduino compatability with the Adafruit QT Py M0: 
+ rosserial arduino compatibility with the Adafruit QT Py M0: 
 
  in ros_lib/ArduinoHardware.h, 
  add the following lines between the first "#enddif" and the next "#if defined"
@@ -190,8 +190,7 @@ void getAveragedReadings(float &avgVoltage_Divided, float &avgTempRes) {
   float sum1 = 0, sum2 = 0;
   int sampleCount = 0;
 
-  // Keep sampling for 10 seconds
-  while (millis() - startTime < averagePeriod) {
+  while (millis() - startTime < averagePeriod) {  // Keep sampling for 10 seconds
     int VoltageADC_Raw = analogRead(VoltageInput);
     float Voltage_Divided = (VoltageADC_Raw / (float)maxAdcValue) * referenceVoltage;
     sum1 += Voltage_Divided;
