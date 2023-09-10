@@ -5,7 +5,6 @@
  * The Human Centered Robotics Laboratory
  * The University of Texas at Austin
  * 
- * 
  Designed for Adafruit QT Py M0, Reads ADC values at A2 and A3 expecting divided voltage.
  Displays undivided voltage and other derived values on Adafruit 1.12" I2C display.
  Acts as a ROS publisher utilizing rosserial, 
