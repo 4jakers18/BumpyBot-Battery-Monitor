@@ -15,7 +15,7 @@ For `BatteryState` ROS message documentation see [here](http://docs.ros.org/en/a
 
 ### PCB
 - [Schematic PDF](PCB/BumpyBotBatteryMonitorkicad_pro.pdf)
-![Schematic](figures/schematic.png)
+<img src="figures/schematic.png" alt="Schematic" width="600"/>
 <table>
   <tr>
     <td><img src="/figures/barepcb.png" alt="barepcb"></td>
