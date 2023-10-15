@@ -13,7 +13,25 @@ For `BatteryState` ROS message documentation see [here](http://docs.ros.org/en/a
 
 ## Hardware 
 
-(To Be Added)
+### PCB
+- [Schematic PDF](PCB/BumpyBotBatteryMonitorkicad_pro.pdf)
+
+<table>
+  <tr>
+    <td><img src="/figures/barepcb.png" alt="barepcb"></td>
+    <td><img src="/figures/barepcb_bottom.png" alt="barepcb bottom"></td>  </tr>
+  <tr>
+    <td><img src="/figures/pcb.png" alt="pcb"></td>
+    <td><img src="/figures/pcb_bottom.png" alt="pcb bottom"></td>
+  </tr>
+</table>
+
+
+
+### Adafruit QT Py - SAMD21 Dev Board with STEMMA QT
+  - (https://www.adafruit.com/product/4600)
+  - SeeedStudio Xiao footprint, soldered to PCB via castellated pads
+
 
 ## Setup & Dependencies
 
