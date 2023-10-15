@@ -14,7 +14,12 @@ For `BatteryState` ROS message documentation see [here](http://docs.ros.org/en/a
 ## Hardware 
 
 ### PCB
-- [Schematic PDF](PCB/BumpyBotBatteryMonitorkicad_pro.pdf)
+Designed in Kicad 7, project and gerber files are included in the ```PCB``` folder. Note that the gerber is "panelized" in a 4x4 configuration, so if sent to fabrication, it will be made as one panel with 16 individual PCB's seperated by V-cuts. Designed around JLCPCB fabrication capabilities. 
+
+Also note that [BOM.csv](PCB/BOM.csv) is not formatted for KiCad, and is missing [U2](#u2-pololu-5v-500ma-step-down-voltage-regulator-d24v5f5). 
+
+[Click here for the schematic PDF](PCB/BumpyBotBatteryMonitorkicad_pro.pdf)
+
 <img src="figures/schematic.png" alt="Schematic" width="600"/>
 <table>
   <tr>
@@ -25,21 +30,24 @@ For `BatteryState` ROS message documentation see [here](http://docs.ros.org/en/a
     <td><img src="/figures/pcb_bottom.png" alt="pcb bottom"></td>
   </tr>
 </table>
-
+[TH1](#th1-littelfuse-usp10982-ntc-thermistor) is the JST connector in the schematic/PCB, see below for the actual device.
 
 
 ### Adafruit QT Py - SAMD21 Dev Board with STEMMA QT
   - https://www.adafruit.com/product/4600
   - SeeedStudio Xiao footprint, soldered to PCB via castellated pads
-
 ### Adafruit Monochrome 1.12" 128x128 OLED Graphic Display
   - https://www.adafruit.com/product/5297
   - Connected to the Qt Py via the I2C STEMMA QT port
   - Attached to the pcb via M2.5 standoffs.
-
-### Pololu 5V, 500mA Step-Down Voltage Regulator D24V5F5
+### *TH1*: Littelfuse USP10982 NTC Thermistor
+- https://www.digikey.com/en/products/detail/littelfuse-inc/USP10982/2651606
+- 10Kohm at ~25 degrees Celcius
+- Beta (K): 3892k
+### *U2*: Pololu 5V, 500mA Step-Down Voltage Regulator D24V5F5
 - https://www.pololu.com/product/2843/specs
-- U2 on the PCB Schematic, THT Soldered to the PCB
+- U2 on the PCB Schematic, THT Soldered to the PCB, *NOT INCLUDED IN BOM FILE.*
+
 
 ## Software Setup & Dependencies
 
