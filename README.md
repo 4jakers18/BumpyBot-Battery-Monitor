@@ -30,7 +30,7 @@ Also note that [BOM.csv](PCB/BOM.csv) is not formatted for KiCad, and is missing
     <td><img src="/figures/pcb_bottom.png" alt="pcb bottom"></td>
   </tr>
 </table>
-[TH1](#th1-littelfuse-usp10982-ntc-thermistor) is the JST connector in the schematic/PCB, see below for the actual device.
+TH1 is the JST connector in the schematic/PCB, see below for the actual device.
 
 
 ### Adafruit QT Py - SAMD21 Dev Board with STEMMA QT
